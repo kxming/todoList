@@ -1,0 +1,56 @@
+<!--<div class="app-header">-->
+<!--        <span class="header-trigger" (click)="isCollapsed = !isCollapsed">-->
+<!--            <i class="trigger"-->
+<!--               nz-icon-->
+<!--               [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"-->
+<!--            ></i>-->
+<!--        </span>-->
+<!--</div>-->
+<div class="header-container">
+  <img class="background-img" src="./../../../../../assets/img/logo.png" alt="">
+  <div class="list-title-wrapper">
+    {{ listTitle }}
+  </div>
+  <div class="suggest-btn-wrapper">
+      <button nz-dropdown nz-button [nzType]="'primary'" [nzTrigger]="'click'" [nzDropdownMenu]="advance" [nzPlacement]="'bottomRight'">
+        <i nz-icon nzType="bulb" nzTheme="outline"></i>
+        建议
+      </button>
+      <!-- hack nz-zorro! -->
+    <nz-dropdown-menu #advance="nzDropdownMenu">
+      <div nz-menu class="dropdown-content-wrapper">
+        <app-suggest></app-suggest>
+      </div>
+    </nz-dropdown-menu>
+  </div>
+  <div class="action-btn-wrapper">
+    <a nz-dropdown [nzTrigger]="'click'" [nzDropdownMenu]="setting" [nzPlacement]="'bottomRight'">
+      <i nz-icon nzType="setting" nzTheme="outline"></i>
+      设置
+    </a>
+    <nz-dropdown-menu #setting="nzDropdownMenu">
+      <ul nz-menu>
+        <li nz-menu-item (click)="toggleCompletedHide()">
+          {{ completedHide ? '显示已完成' : '隐藏已完成' }}
+        </li>
+        <li nz-submenu>
+          <span title>排序</span>
+          <ul nzSelectable class="sort-option-list">
+            <li nz-menu-item (click)="switchRankType('title')">
+              名称
+            </li>
+            <li nz-menu-item (click)="switchRankType('planAt')">
+              计划时间
+            </li>
+            <li nz-menu-item (click)="switchRankType('dueAt')">
+              截止时间
+            </li>
+            <li nz-menu-item (click)="switchRankType('completeFlag')">
+              完成状态
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nz-dropdown-menu>
+  </div>
+</div>
