@@ -8,7 +8,7 @@ import { MainRoutingModule } from './main-routing.module';
 import { MainComponent } from './main.component';
 import { LeftControlComponent } from './left-control/left-control.component';
 import { RightControlComponent } from './right-control/right-control.component';
-import { DatailComponent } from './datail/datail.component';
+import { DetailComponent } from './detail/detail.component';
 import { ListComponent } from './left-control/list/list.component';
 import { HeaderComponent } from './right-control/header/header.component';
 import { SuggestComponent } from './right-control/header/suggest/suggest.component';
@@ -21,7 +21,7 @@ import { TodoComponent } from './right-control/todo/todo.component';
     MainComponent,
     LeftControlComponent,
     RightControlComponent,
-    DatailComponent,
+    DetailComponent,
     ListComponent,
     HeaderComponent,
     SuggestComponent,

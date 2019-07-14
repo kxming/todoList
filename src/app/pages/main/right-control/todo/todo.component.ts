@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, TemplateRef } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { NzDropdownMenuComponent, NzContextMenuService} from 'ng-zorro-antd';
 import { combineLatest, Subject } from 'rxjs';
@@ -83,7 +83,7 @@ export class TodoComponent implements OnInit, OnDestroy {
   }
 
   click(uuid: string): void {
-    // this.router.navigateByUrl(`/main/${uuid}`);
+    this.router.navigate([`/main/${uuid}`]);
   }
 
   contextMenu(
@@ -91,8 +91,9 @@ export class TodoComponent implements OnInit, OnDestroy {
     template: NzDropdownMenuComponent,
     uuid: string
   ): void {
+    console.log(111, uuid);
+    console.log(222, this.todos);
     this.nzContextMenuService.create($event, template);
-    console.log(111, this.currentContextTodo);
     this.currentContextTodo = this.todos.find(t => t._id === uuid);
   }
 

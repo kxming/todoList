@@ -35,10 +35,10 @@
         移动到...
       </span>
       <ul>
-        <li nz-menu-item *ngIf="currentContextTodo.listUUID !== 'todo'" (click)="moveToList('todo')">
+        <li nz-menu-item *ngIf="currentContextTodo?.listUUID !== 'todo'" (click)="moveToList('todo')">
           默认列表
         </li>
-        <li nz-menu-item *ngFor="let list of listsExcept(currentContextTodo.listUUID)" (click)="moveToList(list._id)">
+        <li nz-menu-item *ngFor="let list of lists" (click)="moveToList(list._id)">
           {{ list.title }}
         </li>
       </ul>

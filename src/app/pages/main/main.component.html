@@ -1,15 +1,12 @@
-<nz-layout class="app-layout">
+<nz-layout class="full-screen">
   <nz-sider class="menu-sidebar"
             nzCollapsible
             nzWidth="256px"
             nzBreakpoint="md"
-            [(nzCollapsed)]="isCollapsed"
-            [nzTrigger]="null">
+            [(nzCollapsed)]="isCollapsed">
     <app-left-control [isCollapsed]="isCollapsed"></app-left-control>
   </nz-sider>
   <nz-content class="container">
-    <div class="inner-content">
-    </div>
     <app-right-control></app-right-control>
   </nz-content>
 </nz-layout>

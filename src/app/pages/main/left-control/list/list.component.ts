@@ -40,7 +40,6 @@ export class ListComponent implements OnInit, OnDestroy {
     private modal: NzModalService
   ) { }
 
-  private dropdown: NzDropdownMenuComponent;
   private destroy$ = new Subject();
 
   ngOnInit() {

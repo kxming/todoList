@@ -29,11 +29,11 @@ export class LeftControlComponent implements OnInit {
   }
 
   goSetting() {
-    // this.router.navigateByUrl('/setting');
+    this.router.navigate(['/setting']);
   }
 
   goSummary() {
-    // this.router.navigateByUrl('/summary');
+    this.router.navigate(['/summary']);
   }
 
 }
