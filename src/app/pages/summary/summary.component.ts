@@ -52,6 +52,6 @@ export class SummaryComponent implements OnInit {
   }
 
   goBack(): void {
-    this.router.navigateByUrl('/main');
+    this.router.navigate(['/main']);
   }
 }

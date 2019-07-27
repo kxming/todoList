@@ -17,11 +17,11 @@ export class InitGuardService implements CanActivate {
     const init = !!this.store.get(INIT_FLAG);
 
     if (state.url.includes('setup') && init) {
-      this.router.navigateByUrl('/main');
+      this.router.navigate(['/main']);
       return false;
     }
     if (!state.url.includes('setup') && !init) {
-      this.router.navigateByUrl('/setup');
+      this.router.navigate(['/setup']);
       return false;
     }
 

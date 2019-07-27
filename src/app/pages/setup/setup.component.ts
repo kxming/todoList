@@ -31,6 +31,6 @@ export class SetupComponent implements OnInit {
     this.store.set(START_USING_DATE, getTodayTime());
     this.store.set(USERNAME, this.username);
 
-    // this.router.navigateByUrl('main');
+    this.router.navigate(['main']);
   }
 }
