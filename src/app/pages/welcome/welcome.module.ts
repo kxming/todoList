@@ -4,9 +4,11 @@ import { WelcomeRoutingModule } from './welcome-routing.module';
 
 import { WelcomeComponent } from './welcome.component';
 
+import { WidgetsModule } from 'widgets';
+
 
 @NgModule({
-  imports: [WelcomeRoutingModule],
+  imports: [WelcomeRoutingModule, WidgetsModule],
   declarations: [WelcomeComponent],
   exports: [WelcomeComponent]
 })

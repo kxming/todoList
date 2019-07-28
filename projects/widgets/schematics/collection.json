@@ -1,0 +1,14 @@
+{
+  "$schema": "../../../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "ng-add": {
+      "description": "Add my library to the project.",
+      "factory": "./ng-add/index#ngAdd"
+    },
+    "color-picker": {
+      "description": "Generate a color-picker component",
+      "factory": "./color-picker/index#colorPicker",
+      "schema": "./color-picker/schema.json"
+    }
+  }
+}
